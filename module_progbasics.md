@@ -14,12 +14,27 @@
 
 #### What is the purpose and methods of a dictionary/map data structure?
 * The purpose of a dictionary is to map keys to values and store them in an array or collection. 
-* The methods of a dictionary are: "items", "keys", "values" and "popitem"**
+* The methods of a dictionary are: "items", "keys", "values" and "popitem"
 
 ### Algorithms
 
 #### Fibonacci sequences. Write a method (or pseudo code), that generates the Fibonacci sequences.
+def fibonacci(n):
+    terms = [0, 1]
+    i = 2
+    while i <= n:
+        terms.append(terms[i - 1] + terms[i - 2])
+        i += 1
+    return terms
+
 #### How do you find a max value in a list/array if you can’t use any built-in functions?
+def max_in_list(listOfNr):
+    maxi = -1.8e308
+    for number in listOfNr:
+        if maxi < number:
+            maxi = number
+    return maxi
+
 #### How do you find the average of values in a list/array if you can’t use any built-in functions?
 #### What do we call an *in-place* sort?
 #### Explain an algorithm which sorts a list!
