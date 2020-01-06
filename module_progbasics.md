@@ -5,13 +5,16 @@
 ### Data structures
 
 #### What is the purpose of a list (array in some programming languages) data structure? Name some methods of it!
-**The purpose of a list is to collect objects in an orderly manner. Some list methods are: "append", "extend", "insert", "remove", or "pop".**
+* The purpose of a list is to collect objects in an orderly manner. 
+* Some list methods are: "append", "extend", "insert", "remove", or "pop".
 
 #### What is the difference between a list/array and a set?
-**A list is ordered, can be accessed using an index, can have duplicate elements and are mutable (elements can be added, deleted, or moved around). A set is unordered, its elements are unique and are immutable (they can't be changed once they have been assigned).**
+* A list is ordered, can be accessed using an index, can have duplicate elements and are mutable (elements can be added, deleted, or moved around). 
+* A set is unordered, its elements are unique and are immutable (they can't be changed once they have been assigned).
 
 #### What is the purpose and methods of a dictionary/map data structure?
-**The purpose of a dictionary is to map keys to values and store them in an array or collection. The methods of a dictionary are: "items", "keys", "values" and "popitem"**
+* The purpose of a dictionary is to map keys to values and store them in an array or collection. 
+* The methods of a dictionary are: "items", "keys", "values" and "popitem"**
 
 ### Algorithms
 
