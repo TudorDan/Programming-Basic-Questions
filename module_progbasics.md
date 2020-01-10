@@ -14,7 +14,7 @@
 
 #### What is the purpose and methods of a dictionary/map data structure?
 * The purpose of a dictionary is to map keys to values and store them in an array or collection. 
-* The methods of a dictionary are: "items", "keys", "values" and "popitem"
+* The methods of a dictionary are: "items", "keys", "values", "get" and "popitem"
 
 ### Algorithms
 
