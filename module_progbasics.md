@@ -6,7 +6,7 @@
 
 #### What is the purpose of a list (array in some programming languages) data structure? Name some methods of it!
 * The purpose of a list is to collect objects in an orderly manner. 
-* Some list methods are: "append", "extend", "insert", "remove", or "pop".
+* Some list methods are: _append_, _extend_, _insert_, _remove_, or _pop_.
 
 #### What is the difference between a list/array and a set?
 * A list is ordered, can be accessed using an index, can have duplicate elements and are mutable (elements can be added, deleted, or moved around). 
@@ -14,7 +14,7 @@
 
 #### What is the purpose and methods of a dictionary/map data structure?
 * The purpose of a dictionary is to map keys to values and store them in an array or collection. 
-* The methods of a dictionary are: "items", "keys", "values", "get" and "popitem"
+* The methods of a dictionary are: _items_, _keys_, _values_, _get_ and _popitem_.
 
 ### Algorithms
 
@@ -48,9 +48,19 @@ def find_avg(array):
     return sum_of_values / len(array)
 ```
 #### What do we call an *in-place* sort?
-* We call sort() an in-place method because it modifies a given list in-place (it modifies the actual list on the spot without returning a new one) by using "<" comparisons between items.
+* We call _sort()_ an in-place method because it modifies a given list in-place (it modifies the actual list on the spot without returning a new one) by using _<_ comparisons between items.
 #### Explain an algorithm which sorts a list!
-
+* Example of *Bubble Sort* algorithm:
+```
+finished = False                                 # declare a boolean variable to check if we finished sorting the list
+list_length = len(a_list)           # get the number of items in a list so that we don't call len() for each iteration
+while not finished:                 # we keep looping until we finished sorting (finished == True)
+    finished = True                 # we assume it's finished (the condition to break out of the while loop)
+    for i in range(list_length - 1):               # iterate through the list without the last item
+        if a_list[i] > a_list[i + 1]:              # if the current item is bigger than the next..
+            a_list[i], a_list[i + 1] = a_list[i + 1], a_list[i]         # we swap them
+            finished = False        # keep looping until we have nothing left to swap
+```
 ### Programming paradigms - procedural
 
 #### What is the call stack?
