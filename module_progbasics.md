@@ -20,32 +20,32 @@
 
 #### Fibonacci sequences. Write a method (or pseudo code), that generates the Fibonacci sequences.
 ```
-    def fibonacci(n):
-        terms = [0, 1]
-        i = 2
-        while i <= n:
-            terms.append(terms[i - 1] + terms[i - 2])
-            i += 1
-        return terms
+def fibonacci(n):
+    terms = [0, 1]
+    i = 2
+    while i <= n:
+        terms.append(terms[i - 1] + terms[i - 2])
+        i += 1
+    return terms
 ```
 
 #### How do you find a max value in a list/array if you can’t use any built-in functions?
 ```
 def max_in_list(listOfNr):
-        maxi = -1.8e308
-        for number in listOfNr:
-            if maxi < number:
-                maxi = number
-        return maxi
+    maxi = -1.8e308
+    for number in listOfNr:
+        if maxi < number:
+            maxi = number
+    return maxi
 ```
 
 #### How do you find the average of values in a list/array if you can’t use any built-in functions?
 ```
-    def find_avg(array):
-        sum_of_values = 0
-        for value in array:
-            sum_of_values += value
-        return sum_of_values / len(array)
+def find_avg(array):
+    sum_of_values = 0
+    for value in array:
+        sum_of_values += value
+    return sum_of_values / len(array)
 ```
 #### What do we call an *in-place* sort?
 * We call sort() an in-place method because it modifies a given list in-place (it modifies the actual list on the spot without returning a new one) by using "<" comparisons between items.
