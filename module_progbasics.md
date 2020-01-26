@@ -307,13 +307,41 @@ According to Agile software development:
 ### Unix
 
 #### What is UNIX and what is Linux?
+- UNIX is an operating system that was born in the late 1960s, when AT&T Bell Labs released an operating system called Unix written in C, which allows quicker modification, acceptance, and portability. It began as a one-man project under the leadership of Ken Thompson of Bell Labs. It went on to become most widely used operating systems. Unix is a proprietary operating system. Unix is a proprietary operating system.
+- Linux is a replica of UNIX that does not use its code built by Linus Torvalds at the University of Helsinki in 1991. The name "Linux" comes from the Linux kernel. It is free and open source software.
 #### What do we call the shell in Linux?
+- Shell = command line interpreter
 #### What does root means in a Linux environment?
+- Root is the user name or account that by default has access to all commands and files on a Linux or other UNIX-like operating systems. It is also referred to as the root account, root user and the superuser.
 #### How do you access your personal files in Linux?
+- In Linux, personal data is stored in /home/username folder.
 #### How can you install an application in Linux?
+- Run the command in the Terminal (text input/output environment):
+```
+sudo apt install <name_of_application>
+```
 #### What is package management in Linux, what are repositories?
+- Package management system allows users to install, update, remove and get information about software installed.
+- Repositories are storage locations where the packages are downloaded from.
+- Users can use _apt_ and _dpkg_ commands to query and update the database of software available in repositories and installed on the system, to install or remove software and upgrade installed packages, and clean up obsolete programs. 
 #### How do you navigate in the filesystem with the command line?
+- _cd_ Change directory. Used to navigate between folders.
+- _pwd_ Display current directory.
+- _ls_ Display a list of files in the current directory.
+- _stat_ Display when a file was last accessed, modified, or changed.
 #### What does the following commands do: mkdir, rm, cat, cp, touch?
+- _mkdir_ Create a directory.
+- _rm_ Remove a file or set of files.
+- _cat_ Display the contents of a text file.
+- _cp_ Makes a copy of a file.
+- _touch_ Create a file.
 #### How can you look up what does a command do in Linux if you have no internet connection?
+- _command --help_ or _man command_
 #### What does the following commands do: head, tail, more, less?
+- _head_ Output the first 10 lines of file.
+- _tail_ Output the last 10 lines of file.
+- _more_ Output the contents of file.
+- _less_ View and paginate file.
 #### How do you download a file from internet using the terminal?
+- _wget file_
+* * *
