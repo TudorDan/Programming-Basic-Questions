@@ -293,6 +293,14 @@ print_kwargs(**my_dict)
 ## Software Development Methodologies
 
 #### What is the main goal of a retrospective meeting?
+According to Agile software development:
+>- A retrospective meeting is a meeting that's held at the end of a single development cycle, usually measured as one week or two. 
+>- The main goal of the retrospective is to reflect on what happened in the development and identify actions for improvement and going forward.
+>- Each member of the team members answers the following questions:
+>    + What worked well for us?
+>    + What did not work well for us?
+>    + What actions can we take to improve our process going forward?
+* * *
 
 ## Programming environment
 
