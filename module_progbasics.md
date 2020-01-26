@@ -49,7 +49,7 @@ def find_avg(array):
 #### Explain an algorithm which sorts a list!
 * Example of *Bubble Sort* algorithm:
 ```
-finished = False                                 # declare a boolean variable to check if we finished sorting the list
+finished = False                    # declare a boolean variable to check if we finished sorting the list
 list_length = len(a_list)           # get the number of items in a list so that we don't call len() for each iteration
 while not finished:                 # we keep looping until we finished sorting (finished == True)
     finished = True                 # we assume it's finished (the condition to break out of the while loop)
@@ -188,7 +188,7 @@ my_dict = {"name": "Jane", "surname": "Doe"}
 print_kwargs(**my_dict)
 ```
 #### What happens when you try to assign the result of a function which has no return statement to a variable in Python?
-* A function without an explicit return statement returns _None_. The variable will the value of _None_.
+* A function without an explicit return statement returns _None_. The variable will have the value of _None_.
 * * *
 
 ## Software engineering
@@ -196,8 +196,20 @@ print_kwargs(**my_dict)
 ### Debugging
 
 #### What techniques can you use while debugging a program in Python?
+* We can use the following techniques for debugging:
+    + insert a _print()_ statement after every line which outputs the intermediate results which were calculated on that line.
+    + an IDE debugger tool or the _pdb_, a built-in Python module which we can use to debug a program while it’s running.
+    + some automated tools which can help us to debug errors: 
+        - _Pyflakes_ parses code instead of importing it, which means that it can’t detect as many errors as other tools (but it is also safer to use, since there is no risk that it will execute broken code which does permanent damage to our system).
+        - _Pylint_ and _PyChecker_ do import the code that they check, and they produce more extensive lists of errors and warnings.
+        - _Pep8_ specifically targets bad coding style – it checks whether our code conforms to Pep 8, a specification document for good coding style.
 #### What does step over, step into and step out mean while using the debugger?
+* __*step into*__ A function is about to be invoked and you want to debug into the code of that function, so the next step is to go into that function and continue debugging step-by-step.
+* __*step over*__ A function is about to be invoked, but you're not interested in debugging this particular invocation, so you want the debugger to execute that function completely as one entire step.
+* __*step out*__ You're done debugging this function step-by-step and you just want the debugger to run the entire function until it returns as one entire step.
 #### How can you start to debug a program from a certain line using the debugger?
+* __*line breakpoint*__ You don't care how it got there, but if execution reaches a particular line of code, you want the debugger to temporarily pause execution there so you can decide what to do.
+* * *
 
 ### Version control
 
