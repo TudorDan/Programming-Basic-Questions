@@ -58,6 +58,7 @@ while not finished:                 # we keep looping until we finished sorting 
             a_list[i], a_list[i + 1] = a_list[i + 1], a_list[i]         # we swap them
             finished = False        # keep looping until we have nothing left to swap
 ```
+* * *
 
 ### Programming paradigms - procedural
 
@@ -69,6 +70,7 @@ while not finished:                 # we keep looping until we finished sorting 
 * _Stack overflow_ is a filled up stack frame. Python’s stack has a finite size – if we keep placing instances of the function on the stack we will eventually fill it up and cause a stack overflow.
 #### What are the main parts of a function?
 * The mai parts of a function are: _parameters_, _function body_, _variables_, _statements_, _expressions_, _function call_ and _arguments (input parameters)_.
+* * *
 
 ### Programming languages - Python  
 #### How do you use a dictionary in Python?
