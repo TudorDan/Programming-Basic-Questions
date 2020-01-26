@@ -76,23 +76,120 @@ while not finished:                 # we keep looping until we finished sorting 
 #### How do you use a dictionary in Python?
 * We can use a dictionary to store key-value pairs. To define a dictionary literal, we put a comma-separated list of key-value pairs between curly brackets. We use a colon to separate each key from its value. We access values in the dictionary by using keys instead of indices.
 #### What does it mean that an object is immutable in Python?
+* _Immutable_ means we cannot alter the existing value in any way. Some values in Python can be modified, and some cannot. 
+* Integers, floating-point numbers and strings are all immutable types. Tuples are immutable data types.
 #### What is conditional expression in Python?
+* A _conditional expression_ is a selection control statement that allows programmers to change the flow of control.
+* Conditionals (the _if/elif/else_ family) can be used to pick a code block based upon the truth value of the conditions in them.
 #### What are different types of arguments in Python?
+* There are 3 types of arguments:
+    1. _optional_ => To make a parameter optional, we need to supply a default value for it. Optional parameters must come after all the required parameters in the function definition:
+    ```
+    def make_greeting(title, name, surname, formal=True):
+        if formal:
+            return "Hello, %s %s!" % (title, surname)
+        return "Hello, %s!" % name
+    make_greeting("Mr", "John", "Smith")
+    make_greeting("Mr", "John", "Smith", False)
+    ```
+    2. _positional_ => a tuple of values which are matched up with parameters in the function signature based on their positions:
+    ```
+    def make_greeting(title, name, surname, formal=True, time=None):
+        if formal:
+            fullname =  "%s %s" % (title, surname)
+        else:
+            fullname = name
+        if time is None:
+            greeting = "Hello"
+        else:
+            greeting = "Good %s" % time
+        return "%s, %s!" % (greeting, fullname)
+    make_greeting("Mr", "John", "Smith", False, "evening")
+    ```
+    3. _keyword_: => explicitly specify the parameter names along with the values:
+    ```
+    make_greeting(title="Mr", name="John", surname="Smith", formal=False, time="evening")
+    ```
 #### What is variable shadowing? (context: variable scope)
+* _Variable shadowing_ occurs when a variable declared within a certain scope (decision block, method, or inner class) has the same name as a variable declared in an outer scope:
+```
+x = 0
+def outer():
+    x = 1
+    def inner():
+        x = 2
+        print("inner:", x)
+    inner()                # prints //inner: 2
+    print("outer:", x) 
+outer()                    # prints //outer: 1
+print("global:", x)        # prints //global: 0
+```
 #### What can happen if you try to delete/drop/add an item from a List, while you are iterating over it in Python?
+* You may encounter an IndexError: list index out of range.
 #### What is the "golden rule" of variable scoping in Python (context: LEGB)? What is the lifetime of variables?
+* The "golden rule" of variable scoping in Python (context: LEGB, L = Local, E = Enclosed (function is wrapped inside another function), G = Global, B =Built-in): when local as well as global variable is present, *preference is given to the local variable*. 
+* The lifetime of a variable: it exists for as long as the function is executing. 
 #### If you need to access the iterator variable after a for loop, how would you do it in Python?
+* The built-in Python function _iter()_, which returns something called an iterator. The built-in function _next()_ is used to obtain the next value from in iterator:
+```
+a = ['foo', 'bar', 'baz']
+itr = iter(a)
+next(itr)
+next(itr)
+next(itr)
+```
+* If all the values from an iterator have been returned already, a subsequent next() call raises a StopIteration exception. 
 #### What type of elements can a list contain in Python?
+* A list can contain basically any type of elements.
 #### What is slice operator in Python and how to use?
+* The slice operator is a method that extracts a subset of a list, which will itself be a list.
+* In order to use it, you need to specify an upper and lower bound. Note that our sublist will include the element at the lower bound, but _exclude_ the element at the upper bound:
+```
+animals = ['cat', 'dog', 'fish', 'bison']
+print(animals[1:3]) # ['dog', 'fish']
+print(animals[1:-1]) # ['dog', 'fish']
+```
 #### What arithmetic operators (+,*,-,/) can be used on lists in Python? What do they do?
+* The arithmetic operators that can be used on lists are:
+    - **+** addition
+    - **-** subtraction
+    - __*__ multiplication
+    - **/** division
+    - **%** modulo (the remainder of division)
+    - __**__ exponentiation
 #### What is the purpose of the in and not in membership operators in Python?
+* Membership operators like _in_ and _not in_ are operators used to validate the membership of a value. It test for membership in a sequence, such as strings, lists, or tuples.
 #### What does the + operator mean when used with strings in Python?
+* When used with strings, the __+__ operator means concatenation: a method to add multiple strings together.
 #### Explain f strings in Python?
+* Python 3.6 added a new string formatting approach called formatted string literals or “f-strings”. This new way of formatting strings lets you use embedded Python expressions inside string constants:
+```
+>>> f'Hello, {name}!'
+'Hello, Bob!'
+```
 #### Name 4 iterable types in Python!
+* Lists, tuples, dictionaries and sets are all iterable types in Python. 
 #### What is the difference between list/set/dictionary comprehension and a generator expression in Python?
+* List Comprehension allows us to create a list using for loop with lesser code.
+* The Generator Expression allows us to create a generator without the yield keyword. Instead of creating a list/set/dictionary and keeping the whole sequence in the memory, the generator generates the next element in demand.
+```
+list_comprehension = [i for i in range(11) if i % 2 == 0]
+generator_expression = (i for i in range(11) if i % 2 == 0)
+```
+* The generator yields one item at a time and generates item only when in demand. Whereas, in a list/set/dictionary  comprehension, Python reserves memory for the whole list. Thus we can say that the generator expressions are memory efficient than the lists/set/dictionary comprehensions. Also generator expressions are faster than list/set/dictionary comprehensions and hence time efficient.
 #### Does the order of the function definitions matter in Python? Why?
+ * Yes, the order of the function definitions does matter in Python, because any call to a function must come after that function definition.
 #### What does unpacking mean in Python?
+* We can use * or ** when we are calling a function to _unpack_ a sequence or a dictionary into a series of individual parameters:
+```
+my_list = ["one", "two", "three"]
+print_args(*my_list)
+my_dict = {"name": "Jane", "surname": "Doe"}
+print_kwargs(**my_dict)
+```
 #### What happens when you try to assign the result of a function which has no return statement to a variable in Python?
+* A function without an explicit return statement returns _None_. The variable will the value of _None_.
+* * *
 
 ## Software engineering
 
