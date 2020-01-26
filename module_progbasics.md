@@ -236,7 +236,7 @@ print_kwargs(**my_dict)
 #### What does it mean atomic commits and descriptive commit messages?
 - When making code changes, you want to make commits that are generally smaller and that encompass only one irreducible feature, fix, or improvement.
 #### What’s the difference between git and GitHub?
--  Git is a version control system that lets you manage and keep track of your source code history.
+- Git is a version control system that lets you manage and keep track of your source code history.
 - GitHub is a web-based hosting service that lets you manage Git repositories.  If you have open-source projects that use Git, then GitHub is designed to help you better manage them.
 * * *
 
@@ -245,7 +245,26 @@ print_kwargs(**my_dict)
 ### Clean code
 
 #### What does clean code mean?
+- Code is clean if it can be understood easily – by everyone on the team. Clean code can be read and enhanced by a developer other than its original author. With understandability comes readability, changeability, extensibility and maintainability.
 #### What steps do we usually do during a clean code refactoring?
+- Read through the whole code.
+- Summarize what is the purpose of the script in one sentence.
+- Run the code to see what is the end result.
+- The code should keep runnable and show the same content when you finish the refactor.
+- Run the code frequently to check you are on the right track.
+- Actual refactoring:
+    + Remove clutter: Clutter is anything in your code that does not add value
+        * Format your code
+        * Delete comments
+    + Remove complexity:
+        * bad names
+        * long methods
+        * deep conditionals
+        * improper variable scopes (global, local)
+    + Remove cleverness: If it's simple and elegant you wouldn't refer to it as 'clever'
+    + Remove the 3 D's: duplication, duplication, duplication
+        * his can be applied by extracting the duplicated code parts into functions
+
 
 ### Error handling
 
