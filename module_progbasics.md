@@ -7,11 +7,9 @@
 #### What is the purpose of a list (array in some programming languages) data structure? Name some methods of it!
 * The purpose of a list is to collect objects in an orderly manner. 
 * Some list methods are: _append_, _extend_, _insert_, _remove_, or _pop_.
-
 #### What is the difference between a list/array and a set?
-* A list is ordered, can be accessed using an index, can have duplicate elements and are mutable (elements can be added, deleted, or moved around). 
+* A list is ordered, can be accessed using an index, can have duplicate elements and are mutable (elements can be added,deleted, or moved around). 
 * A set is unordered, its elements are unique and are immutable (they can't be changed once they have been assigned).
-
 #### What is the purpose and methods of a dictionary/map data structure?
 * The purpose of a dictionary is to map keys to values and store them in an array or collection. 
 * The methods of a dictionary are: _items_, _keys_, _values_, _get_ and _popitem_.
@@ -28,7 +26,6 @@ def fibonacci(n):
         i += 1
     return terms
 ```
-
 #### How do you find a max value in a list/array if you can’t use any built-in functions?
 ```
 def max_in_list(listOfNr):
@@ -38,7 +35,6 @@ def max_in_list(listOfNr):
             maxi = number
     return maxi
 ```
-
 #### How do you find the average of values in a list/array if you can’t use any built-in functions?
 ```
 def find_avg(array):
@@ -61,14 +57,21 @@ while not finished:                 # we keep looping until we finished sorting 
             a_list[i], a_list[i + 1] = a_list[i + 1], a_list[i]         # we swap them
             finished = False        # keep looping until we have nothing left to swap
 ```
+
 ### Programming paradigms - procedural
 
 #### What is the call stack?
+* The _call stack_ is a frame where Python stores information about functions which have been called. 
+* Whenever a function is called, a new stack frame is added to the stack – all of the function’s parameters are added to it, and as the body of the function is executed, local variables will be created there.
+* When the function finishes executing, its stack frame is discarded, and the flow of control returns to wherever you were before you called the function, at the previous level of the stack.
 #### What is “Stack overflow”?
+* _Stack overflow_ is a filled up stack frame. Python’s stack has a finite size – if we keep placing instances of the function on the stack we will eventually fill it up and cause a stack overflow.
 #### What are the main parts of a function?
+* The mai parts of a function are: _parameters_, _function body_, _variables_, _statements_, _expressions_, _function call_ and _arguments (input parameters)_.
 
 ### Programming languages - Python  
 #### How do you use a dictionary in Python?
+* We can use a dictionary to store key-value pairs. To define a dictionary literal, we put a comma-separated list of key-value pairs between curly brackets. We use a colon to separate each key from its value. We access values in the dictionary by using keys instead of indices.
 #### What does it mean that an object is immutable in Python?
 #### What is conditional expression in Python?
 #### What are different types of arguments in Python?
