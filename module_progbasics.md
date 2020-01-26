@@ -13,7 +13,8 @@
 #### What is the purpose and methods of a dictionary/map data structure?
 * The purpose of a dictionary is to map keys to values and store them in an array or collection. 
 * The methods of a dictionary are: _items_, _keys_, _values_, _get_ and _popitem_.
-
+* * *
+/s/s
 ### Algorithms
 
 #### Fibonacci sequences. Write a method (or pseudo code), that generates the Fibonacci sequences.
