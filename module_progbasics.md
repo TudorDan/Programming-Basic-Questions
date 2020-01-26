@@ -214,12 +214,31 @@ print_kwargs(**my_dict)
 ### Version control
 
 #### What are the advantages of using a version control system?
+- The primary benefits you should expect from version control are as follows:
+    1. A complete long-term change history of every file (enables going back to previous versions to help in root cause analysis for bugs and it is crucial when needing to fix problems in older versions of software).
+    2. Branching and merging. Individuals working on their own can benefit from the ability to work on independent streams of changes. There are many different workflows that teams can choose from when they decide how to make use of branching and merging facilities.
+    3. Traceability. Version control software keeps track of every modification to the code in a special kind of database. If a mistake is made, developers can turn back the clock and compare earlier versions of the code to help fix the mistake while minimizing disruption to all team members.
 #### What is the difference between the working directory, the staging area and the repository in git?
+- Git has 3 areas:
+    + The _working directory_ = contains the latest downloaded version from the repository together with any changes that have yet to be committed. As you're working on a project, all changes are made in this working directory.
+    + The _staging area_  = helps to maintain this workflow by allowing you to only promote certain files at a time instead of all the changes in your working directory. Users move, otherwise referred to as promote, changes from the working directory, to a staging area before committing them into the repository.
+    + The _repository_ = a virtual storage of your project. It allows you to save versions of your code, which you can access when needed.
 #### What are remote repositories in git?
+- Remote repositories are versions of your project that are hosted on the Internet or network somewhere. Collaborating with others involves managing these remote repositories and pushing and pulling data to and from them when you need to share work.
 #### Why does a merge conflict occur?
+- Merge conflicts happen when you merge branches that have competing commits, and Git needs your help to decide which changes to incorporate in the final merge.
 #### Through what series of commands could you put a new file into a remote repository connected to your existing local repository?
+- In Terminal, add the URL for the remote repository where your local repository will be pushed:
+    + $ git remote add origin remote repository URL # Sets the new remote
+    + $ git remote -v # Verifies the new remote URL
+- Push the changes in your local repository to GitHub:
+    + $ git push origin master # Pushes the changes in your local repository up to the remote repository you specified as the origin
 #### What does it mean atomic commits and descriptive commit messages?
+- When making code changes, you want to make commits that are generally smaller and that encompass only one irreducible feature, fix, or improvement.
 #### What’s the difference between git and GitHub?
+-  Git is a version control system that lets you manage and keep track of your source code history.
+- GitHub is a web-based hosting service that lets you manage Git repositories.  If you have open-source projects that use Git, then GitHub is designed to help you better manage them.
+* * *
 
 ## Software design
 
