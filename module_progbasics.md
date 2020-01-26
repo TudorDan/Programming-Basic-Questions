@@ -264,15 +264,31 @@ print_kwargs(**my_dict)
     + Remove cleverness: If it's simple and elegant you wouldn't refer to it as 'clever'
     + Remove the 3 D's: duplication, duplication, duplication
         * his can be applied by extracting the duplicated code parts into functions
-
+* * *
 
 ### Error handling
 
 #### What is exception handling?
+- _Exception handling_ is a method that handles unexpected errors in a Python program. Instead of letting the error crash our program we can intercept it, do something about it, and allow the program to continue.
+- Errors are called exceptions in Python and all exceptions are subclasses of the Exception class.
 #### What are the basics of exception handling in Python?
+- The basics of _exception handling_ consist of _try-except_ blocks. Python will try to process all the statements inside the _try_ block. 
+- If an error occurs at any point as it is executing them, the flow of control will immediately pass to the except block, and any remaining statements in the try block will be skipped.
+>- It is good practice if the only code inside the try block is the single line that is the potential source of the error that we want to handle.
 #### In which case should we catch an exception? Why?
+- We should catch an exception when we want to protect small blocks of code against specific errors (better than to wrap large blocks of code and write vague, generic error recovery code).
+- We catch exceptions because:
+    + Exception handling separates normal code from code that handles errors.
+    + Exceptions can easily be passed along functions in the stack until they reach a function which knows how to handle them. 
+    + Exceptions come with lots of useful error information built in – for example, they can print a traceback which helps us to see exactly where the error occurred.
 #### What can/should we do with an exception in the ‘except’ block?
+- In the ‘except’ block we should write code that the program will execute when there is an exception.
+- We can raise exceptions ourselves using the _raise_ statement - perhaps we may want to handle it partially in the current function, but also want to respond to it in the code which called the function.
+- We can also write our own custom exception classes which are based on existing exception classes.
 #### What does the else and finally statement do in a try-except block in Python?
+- The _else_ statement will be executed only if the try clause doesn’t raise an exception.
+- The _finally_ clause will be executed at the end of the try-except block no matter what – if there is no exception, if an exception is raised and handled, if an exception is raised and not handled, and even if we exit the block using *break*, *continue* or *return*. We can use the *finally* clause for cleanup code that we always want to be executed.
+* * *
 
 ## Software Development Methodologies
 
